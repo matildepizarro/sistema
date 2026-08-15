@@ -1,0 +1,49 @@
+/* =====================================================================
+   MODULO CSS: css/01-desktop.css
+   Escritorio — íconos
+   ===================================================================== */
+  /* ================= DESKTOP ================= */
+  /* Grid de verdad (no flex): cada ícono reserva su propia celda de
+     84x84px. Esto es clave para que los grupos "fijos" (juegos en la
+     esquina inferior izquierda, canciones en la superior derecha, ver
+     js/desktop/03-icons-group-games.js y 04-icons-fixed-position.js)
+     puedan anclarse con grid-column/grid-row sin arriesgarse a que,
+     en una ventana angosta, los íconos normales del flujo "invadan"
+     esa zona y terminen superpuestos (bug de textos amontonados). */
+  #desktop{
+    position:fixed; inset:0; bottom:34px;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, 84px);
+    grid-template-rows: repeat(auto-fill, 84px);
+    grid-auto-flow: row;
+    align-content:start;
+    justify-content:start;
+    align-items:start;
+    gap: 4px; padding: 10px;
+    /* red de seguridad: si alguna vez hay demasiados íconos para el
+       alto disponible (p.ej. pantallas muy chicas con muchas
+       canciones), se puede hacer scroll en vez de que algo se corte
+       o se superponga */
+    overflow-y:auto;
+  }
+  /* el contenedor de íconos de canciones no debe ocupar una celda
+     propia: sus hijos participan directo del grid del escritorio */
+  #songIcons{ display:contents; }
+  .icon{
+    width:74px; text-align:center; color:#fff; font-size:11px;
+    text-shadow: 1px 1px 0 #000;
+    padding:4px; user-select:none;
+    cursor: move;
+    /* evita que las etiquetas largas se salgan del ícono y se
+       superpongan con las de al lado: se cortan en palabras o,
+       si hace falta, a mitad de palabra, y quedan centradas */
+    overflow-wrap:break-word; word-break:break-word; hyphens:auto;
+    line-height:1.25;
+  }
+  .icon.dragging{ opacity:0.85; }
+  .icon .glyph{
+    width:32px; height:32px; margin:0 auto 4px;
+    background:#c0c0c0; border:2px outset #fff;
+    display:flex; align-items:center; justify-content:center; font-size:16px;
+  }
+  .icon.sel{ background:rgba(0,0,128,0.4); outline:1px dotted #fff; }
