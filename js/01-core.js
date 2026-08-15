@@ -60,7 +60,17 @@ function checkBirthday(d){
   const isBirthdayDate = d.getDate() === 14 && d.getMonth() === 7 && d.getFullYear() === 2026;
   if(isBirthdayDate && !birthdayTriggered){
     birthdayTriggered = true;
-    launchBirthdayCelebration();
+    // NOTA: se espera al evento 'load' de window a propósito. launchBirthdayCelebration()
+    // usa funciones (spawnToast, etc.) definidas en archivos que cargan MÁS TARDE que
+    // este. 'load' es el único momento garantizado en que TODOS los scripts (y assets)
+    // ya terminaron de cargar -- setTimeout(fn,0) no alcanza porque puede disparar
+    // mientras el navegador todavía está esperando la descarga de otro <script> de más
+    // abajo, y en ese momento esas funciones todavía no existirían.
+    if(document.readyState === 'complete'){
+      launchBirthdayCelebration();
+    } else {
+      window.addEventListener('load', launchBirthdayCelebration, { once:true });
+    }
   }
 }
 
