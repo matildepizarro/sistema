@@ -10,6 +10,8 @@
     border:2px inset #fff; padding:4px 6px; margin-bottom:6px;
     overflow:hidden; white-space:nowrap;
   }
+  .wa-cover{ text-align:center; margin-bottom:6px; background:#000; border:2px inset #fff; padding:3px; }
+  .wa-cover img{ width:150px; height:150px; object-fit:cover; display:block; margin:0 auto; }
   .wa-title{ font-weight:bold; }
   .wa-time{ float:right; }
   .wa-progress{

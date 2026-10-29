@@ -13,12 +13,12 @@ function openHelpWindow(){
   win.style.zIndex = ++dragZ;
   win.innerHTML = `
     <div class="titlebar">
-      <div class="ttl"><span class="ico"></span> Ayuda de MATILDE_OS</div>
+      <div class="ttl"><span class="ico"></span> Ayuda de OS98 DE MATILDE PIZARRO</div>
       <div class="winbtns"><button class="hpClose">✕</button></div>
     </div>
     <div class="win-body" style="font-size:12px; line-height:1.6;">
       <b>Sobre este sistema</b><br>
-      MATILDE_OS está dedicado al catálogo y las fechas de <b>Matilde Pizarro</b>.<br><br>
+      OS98 DE MATILDE PIZARRO está dedicado al catálogo y las fechas de <b>Matilde Pizarro</b>.<br><br>
       · Selecciona una fecha en el menú "Publicitando" del cartel principal para activar los mensajes de esa función.<br>
       · Haz doble clic en los archivos 📄 del escritorio para abrir la letra completa; esa canción queda marcada como en reproducción.<br>
       · El ícono que brilla es la canción que está abierta en este momento.<br>

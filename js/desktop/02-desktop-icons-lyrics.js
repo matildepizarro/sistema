@@ -5,6 +5,71 @@ const songIconsWrap = document.getElementById('songIcons');
 const heartsDecor = ['♡','✿','☆','♪','✦'];
 let openLyricWindows = {};
 
+/* Abre (o trae al frente) la ventana tipo Bloc de notas con la letra de la canción
+   y la marca como "en reproducción". Esta función se había perdido al modularizar
+   el proyecto: se llamaba desde los íconos, Mis documentos y Buscar, pero no existía. */
+let lyricWinCount = 0;
+function openLyricWindow(idx){
+  const song = SONGS[idx];
+  if(!song) return;
+
+  const existing = openLyricWindows[idx];
+  if(existing){
+    existing.win.style.display = '';
+    existing.win.style.zIndex = ++dragZ;
+    setNowPlaying(idx);
+    return;
+  }
+
+  lyricWinCount++;
+  const win = document.createElement('div');
+  win.className = 'winfloat lyricwin';
+  win.style.top = (10 + (lyricWinCount % 6) * 3) + '%';
+  win.style.left = (26 + (lyricWinCount % 6) * 3) + '%';
+  win.style.height = '380px';
+  win.style.zIndex = ++dragZ;
+  const hearts = Array.from({length:5}, (_, i)=> heartsDecor[(idx + i) % heartsDecor.length]).join(' ');
+  const lineCount = song.lyrics.split('\n').length;
+  win.innerHTML = `
+    <div class="titlebar">
+      <div class="ttl"><span class="ico"></span> ${song.filename} - Bloc de notas</div>
+      <div class="winbtns"><button class="lyClose" title="Cerrar">✕</button></div>
+    </div>
+    <div class="notepad-menu"><span>Archivo</span><span>Edición</span><span>Formato</span><span>Ayuda</span></div>
+    <div class="win-body" style="padding:0; display:flex; flex-direction:column;">
+      <div class="notepad-nowplaying">▶ REPRODUCIENDO AHORA</div>
+      <div class="notepad-body">
+        <div class="notepad-text"></div>
+        <div class="notepad-foot"><span class="notepad-hearts">${hearts}</span><span>${song.num} · ${song.title} · ${lineCount} líneas</span></div>
+      </div>
+    </div>
+  `;
+  win.querySelector('.notepad-text').textContent = song.lyrics;
+  document.body.appendChild(win);
+  makeDraggable(win);
+  makeResizable(win, 240, 200);
+
+  const taskChip = document.createElement('div');
+  taskChip.className = 'taskitem';
+  taskChip.textContent = '📄 ' + song.filename;
+  errWrap.appendChild(taskChip);
+  taskChip.addEventListener('click', ()=>{
+    win.style.display = '';
+    win.style.zIndex = ++dragZ;
+  });
+
+  openLyricWindows[idx] = { win, taskChip };
+
+  win.querySelector('.lyClose').addEventListener('click', ()=>{
+    win.remove();
+    taskChip.remove();
+    delete openLyricWindows[idx];
+    if(nowPlayingIdx === idx) setNowPlaying(null);
+  });
+
+  setNowPlaying(idx);
+}
+
 SONGS.forEach((song, idx)=>{
   const icon = document.createElement('div');
   icon.className = 'icon songicon';

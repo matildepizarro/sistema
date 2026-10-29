@@ -4,7 +4,8 @@
    ===================================================================== */
 const winampPlaylist = [
   { title: 'Texturas', artist: 'Matilde Pizarro', src: 'assets/audio/TEXTURAS.mp3' },
-  { title: 'Vuelo',    artist: 'Matilde Pizarro', src: 'assets/audio/VUELO.mp3' }
+  { title: 'Vuelo',    artist: 'Matilde Pizarro', src: 'assets/audio/VUELO.mp3' },
+  { title: 'Llamas',   artist: 'Matilde Pizarro', src: 'assets/audio/LLAMAS.mp3', cover: 'assets/img/cover-llamas.jpg' }
 ];
 let winampAudio = null;
 let winampIndex = 0;
@@ -32,6 +33,7 @@ function openWinampPlayer(){
       <div class="winbtns"><button class="waClose">✕</button></div>
     </div>
     <div class="win-body">
+      <div class="wa-cover" id="waCover" style="display:none;"><img id="waCoverImg" alt="Portada"></div>
       <div class="wa-screen">
         <span class="wa-title" id="waTitle">Sin pista</span>
         <span class="wa-time" id="waTime">0:00 / 0:00</span>
@@ -63,6 +65,12 @@ function openWinampPlayer(){
   const playBtn = win.querySelector('#waPlay');
   const volumeEl = win.querySelector('#waVolume');
   const playlistEl = win.querySelector('#waPlaylist');
+  const coverBox = win.querySelector('#waCover');
+  const coverImg = win.querySelector('#waCoverImg');
+  function showCover(t){
+    if(t && t.cover){ coverImg.src = t.cover; coverBox.style.display = ''; }
+    else { coverBox.style.display = 'none'; }
+  }
 
   function renderPlaylist(){
     playlistEl.innerHTML = '';
@@ -80,6 +88,7 @@ function openWinampPlayer(){
     const t = winampPlaylist[winampIndex];
     winampAudio.src = t.src;
     titleEl.textContent = t.artist + ' — ' + t.title;
+    showCover(t);
     renderPlaylist();
     if(autoplay){
       winampAudio.play().catch(()=>{});
@@ -128,6 +137,7 @@ function openWinampPlayer(){
 
   if(winampAudio.src){
     titleEl.textContent = winampPlaylist[winampIndex].artist + ' — ' + winampPlaylist[winampIndex].title;
+    showCover(winampPlaylist[winampIndex]);
     updatePlayBtn();
   }
   renderPlaylist();

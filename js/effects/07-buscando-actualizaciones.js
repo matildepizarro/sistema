@@ -65,7 +65,7 @@ const weightedPool = [
 // partida. Este ícono del escritorio permite pausarlos para jugar tranquilo.
 let glitchEffectsEnabled = true;
 try{
-  const savedGlitchPref = localStorage.getItem('onceOS_glitchEffectsEnabled');
+  const savedGlitchPref = localStorage.getItem('os98_glitchEffectsEnabled');
   if(savedGlitchPref !== null) glitchEffectsEnabled = savedGlitchPref === '1';
 }catch(e){}
 
@@ -92,7 +92,7 @@ function updateGlitchToggleIcon(){
 }
 function setGlitchEffectsEnabled(on){
   glitchEffectsEnabled = on;
-  try{ localStorage.setItem('onceOS_glitchEffectsEnabled', on ? '1' : '0'); }catch(e){}
+  try{ localStorage.setItem('os98_glitchEffectsEnabled', on ? '1' : '0'); }catch(e){}
   updateGlitchToggleIcon();
   spawnToastMessage(on ? '🐛 Efectos de virus/glitch ACTIVADOS' : '🛡️ Efectos de virus/glitch DESACTIVADOS (modo juego tranquilo)');
 }

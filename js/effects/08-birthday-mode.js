@@ -81,7 +81,7 @@ function spawnBirthdayJiggle(){
 /* ---------------- popups de chistes, con varios guiones distintos ---------------- */
 const BIRTHDAY_POPUPS = [
   {
-    title: 'Sistema ONCE_OS™ — CONFETI_98.exe',
+    title: 'OS98 — CONFETI_98.exe',
     msg: '🎉🎂 <b>¡FELIZ CUMPLEAÑOS, MATILDE!</b> 🎂🎉<br><br>Hoy celebramos tus <b>30 años</b>.<br><br>Se han instalado <b>CONFETI_98.exe</b> y <b>GLITTER_30.dll</b> para la ocasión. 💗'
   },
   {
@@ -89,7 +89,7 @@ const BIRTHDAY_POPUPS = [
     msg: '<b>Requisitos mínimos para correr esta fiesta:</b><br><br>• 1 torta (obligatoria)<br>• 30 velas (o una vela que diga "30", para ahorrar)<br>• Parlantes al máximo volumen<br>• Ganas de bailar: 100% requerido<br><br><i>Su sistema SÍ cumple con estos requisitos.</i> ✅'
   },
   {
-    title: 'Escaneo de virus — ONCE_OS™ Defender',
+    title: 'Escaneo de virus — Defender de OS98',
     msg: '🔍 Escaneando el sistema...<br><br>Amenazas encontradas: <b>0</b><br>Nivel de fiesta detectado: <b>crítico (en el buen sentido)</b><br><br>Único proceso corriendo: <b>felicidad30.exe</b> — no se recomienda cerrarlo.'
   },
   {
@@ -176,7 +176,7 @@ const birthdayWeightedPool = [
 /* ---------------- interruptor ON/OFF, igual que "Efectos de virus" ---------------- */
 let birthday30Enabled = false;
 try{
-  const savedBirthdayPref = localStorage.getItem('onceOS_birthday30Enabled');
+  const savedBirthdayPref = localStorage.getItem('os98_birthday30Enabled');
   if(savedBirthdayPref !== null) birthday30Enabled = savedBirthdayPref === '1';
 }catch(e){}
 
@@ -203,7 +203,7 @@ function updateBirthday30ToggleIcon(){
 
 function setBirthday30Enabled(on){
   birthday30Enabled = on;
-  try{ localStorage.setItem('onceOS_birthday30Enabled', on ? '1' : '0'); }catch(e){}
+  try{ localStorage.setItem('os98_birthday30Enabled', on ? '1' : '0'); }catch(e){}
   updateBirthday30ToggleIcon();
   if(on){
     // arranque fuerte al encender, para que se note de inmediato que la

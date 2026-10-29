@@ -13,7 +13,7 @@ const marqueeSpan = document.getElementById('marqueeSpan');
 function refreshMarquee(){
   const showPart = currentShow
     ? `MATILDE PIZARRO EN VIVO — ${currentShow.fecha} — ${currentShow.lugar}`
-    : 'MATILDE_OS — SELECCIONA UNA FECHA PARA PUBLICITAR EL SHOW';
+    : 'OS98 DE MATILDE PIZARRO — SELECCIONA UNA FECHA PARA PUBLICITAR EL SHOW';
   const songPart = (nowPlayingIdx !== null)
     ? ` · REPRODUCIENDO: ${SONGS[nowPlayingIdx].num} ${SONGS[nowPlayingIdx].title}`
     : '';

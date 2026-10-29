@@ -22,7 +22,7 @@ function openDisplayProperties(){
     </div>
     <div class="win-body">
       <div style="font-size:12px;">Fondo de escritorio:</div>
-      <div class="previewscreen" id="dpPreview">MATILDE_OS</div>
+      <div class="previewscreen" id="dpPreview">OS98 DE MATILDE PIZARRO</div>
       <div class="swatchrow" id="dpSwatches"></div>
       <div style="text-align:right;"><button class="btn98 dpClose">Aceptar</button></div>
     </div>

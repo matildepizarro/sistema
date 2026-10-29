@@ -59,7 +59,7 @@ function doPowerSequence(isRestart){
 
   const lines = [
     'Guardando su configuración…',
-    'Cerrando MATILDE_PIZARRO.EXE…',
+    'Cerrando OS98.EXE…',
     isRestart ? 'Windows se está reiniciando…' : 'Windows se está cerrando…'
   ];
   let i = 0;
@@ -106,13 +106,13 @@ function runBootSequence(onDone){
     'Memory Test: 65536K OK',
     '',
     'Detecting IDE drives…',
-    ' Primary Master  : MATILDE_OS  HDD',
+    ' Primary Master  : OS98 HDD',
     ' Primary Slave   : None',
     ' Secondary Master: CD-ROM DRIVE',
     '',
     'Press DEL to enter SETUP, ESC to skip memory test',
     '',
-    'Starting MATILDE_OS...'
+    'Starting OS98...'
   ];
   const pre = document.createElement('pre');
   pre.style.margin = '0'; pre.style.whiteSpace = 'pre-wrap';
@@ -137,7 +137,7 @@ function runBootSequence(onDone){
     bootScreen.style.padding = '0';
     const box = document.createElement('div');
     box.id = 'bootLogoBox';
-    box.innerHTML = '<div class="w98logo">MATILDE_OS</div><div class="w98sub" id="bootSubMsg">Se está iniciando…</div>' +
+    box.innerHTML = '<div class="w98logo">OS98 DE MATILDE PIZARRO</div><div class="w98sub" id="bootSubMsg">Se está iniciando…</div>' +
       '<div class="barTrack"><div class="barFill" id="bootBarFill"></div></div>';
     bootScreen.appendChild(box);
     const fill = box.querySelector('#bootBarFill');

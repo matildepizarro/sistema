@@ -72,7 +72,7 @@ function runFormatAndInstall(){
       setupDosView.textContent = base + 'Formateo completado al 100% 💅\n\n' +
         'Escribiendo información del sistema de archivos… (con mucho amor)\n' +
         'Formato completo. Ni una lágrima derramada. 🎀\n\n' +
-        'Iniciando la instalación de MATILDE_OS…';
+        'Iniciando la instalación de OS98 DE MATILDE PIZARRO…';
       setTimeout(startSetupPhase, 1200);
     }
   }
@@ -90,7 +90,7 @@ function startSetupPhase(){
     'Copiando archivos del sistema… (y algo de purpurina) ✨',
     'Instalando dispositivos de hardware… (que no hagan ruido feo) 🔌',
     'Configurando la red… (para que nadie te deje en visto) 📶',
-    'Instalando MATILDE_PIZARRO.EXE… (la estrella de la casa) ⭐',
+    'Instalando OS98.EXE… (la estrella de la casa) ⭐',
     'Configurando el Menú Inicio… con mucho corazón 💗',
     'Aplicando configuración regional… (uso horario: siempre glamorosa) 🕐',
     'Guardando la configuración… no cierres los ojos, ya casi 🎀'
@@ -140,7 +140,7 @@ function startSetupPhase(){
 
 function finishInstall(){
   setupBox.innerHTML = '<h2>✨ Instalación completa ✨</h2>' +
-    '<div class="sub">MATILDE_OS quedó reluciente. El equipo se reiniciará ahora, aplausos por favor 👏💕</div>';
+    '<div class="sub">OS98 DE MATILDE PIZARRO quedó reluciente. El equipo se reiniciará ahora, aplausos por favor 👏💕</div>';
   setTimeout(()=>{
     sysSetup.style.display = 'none';
     runBootSequence();

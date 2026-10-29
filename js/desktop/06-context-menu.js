@@ -25,5 +25,5 @@ document.getElementById('ctxRefresh').addEventListener('click', ()=>{
 document.getElementById('ctxArrange').addEventListener('click', ()=> triggerIconJiggle());
 document.getElementById('ctxProps').addEventListener('click', ()=> openDisplayProperties());
 document.getElementById('ctxAbout').addEventListener('click', ()=>{
-  spawnErrorPopupCustom('Acerca de MATILDE_OS', 'MATILDE_OS 98<br>Sistema operativo dedicado al catálogo y las fechas de <b>Matilde Pizarro</b>. Todos los derechos reservados al escenario.');
+  spawnErrorPopupCustom('Acerca de OS98 DE MATILDE PIZARRO', 'OS98 DE MATILDE PIZARRO<br>Sistema operativo dedicado al catálogo y las fechas de <b>Matilde Pizarro</b>. Todos los derechos reservados al escenario.');
 });

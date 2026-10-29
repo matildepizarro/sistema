@@ -75,6 +75,7 @@ function openIEWindow(){
         <table class="ie-table">
           <tr><td>TEXTURAS (Single)</td><td>10 abril 2026</td></tr>
           <tr><td>VUELO (Single)</td><td>10 abril 2026</td></tr>
+          <tr><td>LLAMAS (Single) <span class="ie-newtag">NUEVO</span></td><td>2026</td></tr>
           <tr><td>SOMOS IGUALES (Single)</td><td>2026</td></tr>
           <tr><td>ETERNIDAD (Single)</td><td>2026</td></tr>
           <tr><td>Disco (8 canciones)</td><td>2026</td></tr>
@@ -86,13 +87,17 @@ function openIEWindow(){
         <table class="ie-table">
           <tr><td>03/01/26</td><td>Cervecería Popular, Valparaíso</td></tr>
           <tr><td>28/02/26</td><td>Gizzday Volumen 3, Valparaíso</td></tr>
-          <tr><td>28/03/26</td><td>La Sesión Café, Villa Alemana</td></tr>
+          <tr><td>28/03/26</td><td>La Sesión Cafe, Villa Alemana</td></tr>
           <tr><td>20/05/26</td><td>Journal, Viña del Mar</td></tr>
           <tr><td>30/05/26</td><td>La Puerta Amarilla, Santiago</td></tr>
           <tr><td>18/06/26</td><td>Hotzenplotz Bar, Valparaíso</td></tr>
           <tr><td>27/06/26</td><td>Marcha LGBT, Viña del Mar</td></tr>
+          <tr><td>05/08/26</td><td>El Pimenton Restaurant, Valparaíso</td></tr>
           <tr><td>14/08/26</td><td>Café Misp, Villa Alemana</td></tr>
-          <tr><td>05/08/26</td><td>El Pimentón Restaurant, Valparaíso <span class="ie-newtag">PRÓXIMA</span></td></tr>
+          <tr><td>16/10/26</td><td>Fratelli E Amici, Quilpué</td></tr>
+          <tr><td>31/10/26</td><td>Terranea Coffee Bar, Villa Alemana <span class="ie-newtag">PRÓXIMA</span></td></tr>
+          <tr><td>08/11/26</td><td>Feria Rurales, Valparaíso</td></tr>
+          <tr><td>21/11/26</td><td>Jacinta Coffee, Villa Alemana</td></tr>
         </table>
       </div>
 

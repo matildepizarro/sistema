@@ -15,7 +15,7 @@ const SONGS = [
   { num:"07", title:"OCASO CIRCULAR", filename:"07_OCASO_CIRCULAR.txt", lyrics:"EL RIZADO DE MI MENTE\nSE OCULTA EN TU PENSAR\nQUÉ VA A PASAR CON NOSOTRAS\nSI ARRUINAMOS LA OPORTUNIDAD\nARRIBA DEL BOSQUE NOS VAMOS A OCULTAR\nARRIBA DEL BOSQUE NOS VAMOS A OCULTAR\nSALVA TU VIDA Y LA DEL MONTE\nSALVA TU VIDA Y LA DEL MONTE\nHOJAS LLENAS DE SAL\nHOJAS LLENAS DE SAL\nHOJAS LLENAS DE SAL\nHOJAS LLENAS DE SAL\nHOJAS LLENAS DE SAL" },
   { num:"08", title:"LETARGO", filename:"08_LETARGO.txt", lyrics:"TUS PIEDRAS NOS MANDARON\nTÚ ME HACES LLORAR PROFUNDO\nTODO ES IGUAL UN MAR DE FRUSTRACIONES YA\nNUNCA ME APLASTEN EN APLAUSOS\nTAN LEJOS QUIERES IR\nTAN ALTO, PARA IR A CANTAR\nCUÁNTOS CIELOS HAY\nSI ESTÁN ALTOS, NO ME IMPORTA\nTUS PIEDRAS NOS MANDARON\nTÚ ME HACES LLORAR PROFUNDO\nTODO ES IGUAL UN MAR DE FRUSTRACIONES YA\nNUNCA ME APLASTEN EN APLAUSOS\nTAN LEJOS QUIERES IR\nTAN ALTO, PARA IR A CANTAR\nCUÁNTOS CIELOS HAY\nSI ESTÁN ALTOS, NO ME IMPORTA" },
   { num:"09", title:"VUELO", filename:"09_VUELO.txt", lyrics:"DIME EN DÓNDE ESTÁS\nDIME QUÉ MÁS DA\nDIME A DÓNDE ENCUENTRO LO QUE BUSCO EN REALIDAD\nUN BESO SIN HABLAR\nALGO QUEDARÁ\nMI LUGAR ES EN TUS OJOS\nDULCES Y PROFUNDOS\nVUELO, SIN ALAS ESTA VEZ\nVUELO, DONDE YO PUEDA CAER\nVUELO" },
-  { num:"10", title:"LLAMAS", filename:"10_LLAMAS.txt", lyrics:"MIRANDO EL REFLEJO\nEN LA LLAMA DEL SOL\nHAY ALGO QUE ESTÁ PASANDO\nENTRE LAS DOS\nNUNCA SUPUSE DÓNDE ESTOY\nYA NO ESTÁS, PERDIDA HOY\nQUIERO SACARTE DE AHÍ\nMIRANDO EL REFLEJO\nEN LA LLAMA DEL SOL\nHAY ALGO QUE ESTÁ PASANDO\nENTRE LAS DOS\nNUNCA SUPUSE DÓNDE ESTOY\nYA NO ESTÁS, PERDIDA HOY\nQUIERO SACARTE DE AHÍ" },
+  { num:"10", title:"LLAMAS", filename:"10_LLAMAS.txt", lyrics:"MIRANDO EL REFLEJO\nEN LA LLAMA DEL SOL\nHAY ALGO QUE ESTÁ PASANDO\nENTRE LAS DOS\nNUNCA SUPUSE DÓNDE ESTOY\nYA NO ESTÁS\nPERDIDA HOY\nQUIERO SACARTE DE AHÍ\n\nMIRANDO EL REFLEJO\nEN LA LLAMA DEL SOL\nHAY ALGO QUE ESTÁ PASANDO\nENTRE LAS DOS\nNUNCA SUPUSE DÓNDE ESTOY\n\nYA NO ESTÁS\nPERDIDA HOY\nQUIERO SACARTE DE AHÍ\n\nYA NO ESTÁS\nPERDIDA HOY\nQUIERO SACARTE DE AHÍ" },
   { num:"11", title:"EL FINAL", filename:"11_EL_FINAL.txt", lyrics:"TE ALEJASTE Y ME TRAICIONASTE\nME HICISTE ROMPER MIS PASIONES\nAHOGADA EN POCO TIEMPO\nTE HUNDISTE EN TUS ACCIONES\nY YA QUE NO PUEDES CONTROLARTE\nY YA QUE NO PUEDES CONTROLARME" },
 ];
 
@@ -26,17 +26,24 @@ const SONGS = [
 const POSTER_IMAGES = {
   pimenton: "assets/img/poster-pimenton.jpg",
   misp: "assets/img/poster-misp.jpg",
+  fratelli: "assets/img/poster-fratelli.jpg",
+  terranea: "assets/img/poster-terranea.jpg",
+  rurales: "assets/img/poster-rurales.jpg",
 };
 const SHOWS = [
-  { id:"pimenton", fecha:"05/08/2026", lugar:"El Pimentón — Av. Ecuador 27, Valparaíso", horario:"Puertas 19:30 hrs · Show 20:00 hrs", organiza:"@estoeslaonce", poster:{ file:"AFICHE_PIMENTON.JPG", img:"posterImg", caption:"El Pimentón — Av. Ecuador 27, Valparaíso · Miércoles 5 de Agosto" } },
   { id:"cerveceria", fecha:"03/01/2026", lugar:"Cervecería Popular, Valparaíso", horario:"Por confirmar", organiza:"" },
   { id:"gizzday", fecha:"28/02/2026", lugar:"Gizzday Volumen 3, Valparaíso", horario:"Por confirmar", organiza:"" },
-  { id:"sesion", fecha:"28/03/2026", lugar:"La Sesión Café, Villa Alemana", horario:"Por confirmar", organiza:"" },
+  { id:"sesion", fecha:"28/03/2026", lugar:"La Sesión Cafe, Villa Alemana", horario:"Por confirmar", organiza:"" },
   { id:"journal", fecha:"20/05/2026", lugar:"Journal, Viña del Mar", horario:"Por confirmar", organiza:"" },
   { id:"puertaamarilla", fecha:"30/05/2026", lugar:"La Puerta Amarilla, Santiago", horario:"Por confirmar", organiza:"" },
   { id:"hotzenplotz", fecha:"18/06/2026", lugar:"Hotzenplotz Bar, Valparaíso", horario:"Por confirmar", organiza:"" },
   { id:"marchalgbt", fecha:"27/06/2026", lugar:"Marcha LGBT, Viña del Mar", horario:"Por confirmar", organiza:"" },
+  { id:"pimenton", fecha:"05/08/2026", lugar:"El Pimenton Restaurant — Av. Ecuador 27, Valparaíso", horario:"Puertas 19:30 hrs · Show 20:00 hrs", organiza:"@estoeslaonce", poster:{ file:"AFICHE_PIMENTON.JPG", img:"posterImg", caption:"El Pimentón — Av. Ecuador 27, Valparaíso · Miércoles 5 de Agosto" } },
   { id:"misp", fecha:"14/08/2026", lugar:"Café Misp — Victoria 797, Villa Alemana", horario:"18:00 hrs · Entrada liberada", organiza:"Café Misp — Pastelería & Cafetería", poster:{ file:"AFICHE_MISP.JPG", img:"posterImgMisp", caption:"Café Misp — Victoria 797, Villa Alemana · Viernes 14 de Agosto" } },
+  { id:"fratelli", fecha:"16/10/2026", lugar:"Fratelli E Amici — Los Carrera 320, Quilpué", horario:"20:30 hrs · Entrada $4.000 · Reservas 3232883933 / +56 9 7798 6362", organiza:"Fratelli e Amici", poster:{ file:"AFICHE_FRATELLI_E_AMICI.JPG", img:"posterImg", caption:"Fratelli e Amici — Los Carrera 320, Quilpué · Viernes 16 de Octubre · Noche de rock alternativo y baladas oscuras" } },
+  { id:"terranea", fecha:"31/10/2026", lugar:"Terranea Coffee Bar — Venecia Nte. 930, Villa Alemana", horario:"16:30 hrs · Entrada gratis", organiza:"Terranea Coffee Bar", poster:{ file:"AFICHE_TERRANEA_COFFEE_BAR.JPG", img:"posterImg", caption:"Terranea Coffee Bar — Venecia Nte. 930, Villa Alemana · Sábado 31 de Octubre · Gratis" } },
+  { id:"rurales", fecha:"08/11/2026", lugar:"Feria Rurales — Plazoleta tras ex Cárcel, Valparaíso", horario:"12:00 a 20:00 hrs · Gastronomía y oficio antiespecista", organiza:"Rurales", poster:{ file:"AFICHE_RURALES.WEBP", img:"posterImg", caption:"Feria Rurales — Plazoleta tras ex Cárcel, Valparaíso · Domingo 8 de Noviembre · con DJ Villana" } },
+  { id:"jacinta", fecha:"21/11/2026", lugar:"Jacinta Coffee, Villa Alemana", horario:"Por confirmar", organiza:"" },
 ];
 let currentShow = null; // null = ninguna función seleccionada todavía
 
@@ -95,7 +102,7 @@ function launchBirthdayCelebration(){
   spawnToast('🎂 ¡FELIZ CUMPLEAÑOS, MATILDE! HOY CUMPLES 30 AÑOS 🎉');
 
   spawnErrorPopupCustom(
-    'Sistema ONCE_OS™',
+    'OS98 DE MATILDE PIZARRO',
     '🎉🎂 <b>¡FELIZ CUMPLEAÑOS!</b> 🎂🎉<br><br>Hoy, 14/08/2026, Matilde Pizarro cumple <b>30 años</b>.<br><br>Se ha instalado <b>CONFETI_98.exe</b> automáticamente para la ocasión.'
   );
 }
@@ -343,9 +350,9 @@ let openHeavyPopups = 0;
 const MAX_HEAVY_POPUPS = 3;
 const errorMessagesNeutral = [
   ["Excepción no controlada", "RISA32.DLL generó un desbordamiento de pila al intentar procesar el catálogo de <b>Matilde Pizarro</b>. El sistema se recuperó sin pérdida de datos."],
-  ["Advertencia del sistema", "El proceso MATILDE_OS.EXE está usando más recursos de los previstos. Ninguna función está siendo publicitada en este momento."],
+  ["Advertencia del sistema", "El proceso OS98.EXE está usando más recursos de los previstos. Ninguna función está siendo publicitada en este momento."],
   ["Fallo de memoria", "No hay suficiente memoria para cargar el disco debut completo. Cierre algunas ventanas de letras e inténtelo de nuevo."],
-  ["MATILDE_OS", "Este sistema está dedicado íntegramente a <b>Matilde Pizarro</b>. Selecciona una fecha en el cartel principal para publicitar un show."],
+  ["OS98 DE MATILDE PIZARRO", "Este sistema está dedicado íntegramente a <b>Matilde Pizarro</b>. Selecciona una fecha en el cartel principal para publicitar un show."],
   ["Winamp.exe", "El ecualizador está inactivo: no hay ninguna pista marcada como reproduciéndose. Abre un archivo del escritorio para activarlo."],
   ["kaset98.sys", "El casete virtual se atascó rebobinando. Prueba abrir otra canción desde el escritorio."],
   ["FLOPPY_A:\\", "No se puede expulsar el disquete: contiene el archivo de fechas de <b>Matilde Pizarro</b> y está en uso."],
@@ -356,7 +363,7 @@ const errorMessagesLive = (show) => [
   ["Excepción no controlada", `RISA32.DLL generó un desbordamiento de pila: <b>Matilde Pizarro</b> se está publicitando en vivo en ${show.lugar}, ${show.fecha}.`],
   ["Advertencia del sistema", `El sistema está publicitando activamente el show de <b>Matilde Pizarro</b> en ${show.lugar} (${show.fecha}). Esta ventana se puede cerrar sin afectar la función.`],
   ["Fallo de memoria", `No hay suficiente memoria para cargar el disco debut completo mientras se publicita ${show.lugar}.`],
-  ["MATILDE_OS", `Función confirmada: <b>Matilde Pizarro</b> — ${show.fecha} — ${show.lugar}.${show.organiza ? ` Organiza ${show.organiza}.` : ''}`],
+  ["OS98 DE MATILDE PIZARRO", `Función confirmada: <b>Matilde Pizarro</b> — ${show.fecha} — ${show.lugar}.${show.organiza ? ` Organiza ${show.organiza}.` : ''}`],
   ["Winamp.exe", "El ecualizador detectó actividad en el catálogo de Matilde Pizarro. Abre una pista del escritorio para verla en el reproductor."],
   ["kaset98.sys", `El casete virtual se atascó rebobinando la fecha de ${show.lugar}. Prueba abrir otra canción desde el escritorio.`],
   ["FLOPPY_A:\\", `No se puede expulsar el disquete: contiene los datos de la función en ${show.lugar}.`],
@@ -460,10 +467,10 @@ function spawnVirusPopup(){
 
 /* ---------------- ERROR DE VIDEO (ventana emergente con el video del show) ---------------- */
 const videoErrorTitles = [
-  "Error de video — MATILDE_OS",
+  "Error de video — OS98 DE MATILDE PIZARRO",
   "Códec de video no reconocido",
   "VID98.DLL — excepción",
-  "Reproductor de video de MATILDE_OS",
+  "Reproductor de video de OS98 DE MATILDE PIZARRO",
 ];
 function spawnVideoErrorPopup(){
   if(openHeavyPopups >= MAX_HEAVY_POPUPS) return;

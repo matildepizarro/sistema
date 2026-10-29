@@ -14,7 +14,7 @@ document.getElementById('smDocs').addEventListener('click', ()=>{
   openDocsFolder(); closeStartMenu();
 });
 
-// --- Ejecutar...: abre la ventana principal MATILDE_PIZARRO.EXE ---
+// --- Ejecutar...: abre la ventana principal OS98.EXE ---
 document.getElementById('smRun').addEventListener('click', ()=>{
   openMainWin();
   closeStartMenu();

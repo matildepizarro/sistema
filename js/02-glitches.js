@@ -123,7 +123,7 @@ const clippyMsgsLive = (show) => [
   `Consejo: si quieres asistir, revisa los datos de ${show.lugar} en el cartel.`,
   "¿Quieres grabar un recuerdo de esta función con la grabadora de sonido?",
   "Haz doble clic en los archivos de letras para cantar junto a Matilde.",
-  "Este show fue registrado en MATILDE_OS como función en publicidad activa.",
+  "Este show fue registrado en OS98 DE MATILDE PIZARRO como función en publicidad activa.",
   show.organiza ? `Organiza: ${show.organiza}.` : "Puedes arrastrar cualquier ventana desde su barra de título.",
 ];
 function showClippy(){
@@ -140,7 +140,7 @@ function bsodVariants(show){
     return [
 `:-)
 
-Se ha producido un error en MATILDE_OS
+Se ha producido un error en OS98 DE MATILDE PIZARRO
 
 EL SISTEMA ESTÁ PUBLICITANDO UNA FUNCIÓN EN VIVO (0x0000005A)
 
@@ -152,7 +152,7 @@ Presiona cualquier tecla para continuar...
 _`,
 `:-)
 
-MATILDE_OS ha encontrado un problema y necesita reiniciar kawaii-core.dll
+OS98 DE MATILDE PIZARRO ha encontrado un problema y necesita reiniciar kawaii-core.dll
 
 La función publicitada actualmente no se ve afectada:
 Matilde Pizarro en ${show.lugar}, ${show.fecha}.
@@ -175,7 +175,7 @@ _`,
   return [
 `:-)
 
-Se ha producido un error en MATILDE_OS
+Se ha producido un error en OS98 DE MATILDE PIZARRO
 
 NO HAY NINGUNA FUNCIÓN SELECCIONADA (0x0000005A)
 
@@ -187,7 +187,7 @@ Presiona cualquier tecla para continuar...
 _`,
 `:-)
 
-MATILDE_OS ha encontrado un problema y necesita reiniciar kawaii-core.dll
+OS98 DE MATILDE PIZARRO ha encontrado un problema y necesita reiniciar kawaii-core.dll
 
 Esto no afecta el catálogo de Matilde Pizarro guardado en el sistema.
 
